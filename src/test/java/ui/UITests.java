@@ -9,6 +9,14 @@ import org.assertj.core.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/* TODO имя класса все-таки должно быть то что  проверяем.
+   здесь, конечно, тестов не много, поэтому они поместились в один класс. Но по факту они проверяют разный функционал
+   Скорее всего нужно разделить эти методы по разным тестовым классам (сьютам)
+   LoginPageTest (или LoginFormTest, или LoginTest)
+   SearchPageTest
+   CartPageTest (или CartTest)
+
+ */
 public class UITests extends WebUIBaseTest {
     @Attachment(type = "image/png")
     @Test
@@ -16,6 +24,9 @@ public class UITests extends WebUIBaseTest {
         String userName = PropertyManager.getProperties("USER_NAME");
         String password = PropertyManager.getProperties("PASSWORD");
 
+        /* TODO две разных проверки в одном тесте.
+        Нужно вынести три строчки кода в отдельный метод testHomePage
+        */
         MainPageSteps steps = new MainPageSteps();
         steps.openPage();
         Assert.assertTrue(steps.isMainSiteLogoPresent());
@@ -48,6 +59,11 @@ public class UITests extends WebUIBaseTest {
         MainPageSteps mainPagesteps = new MainPageSteps();
         mainPagesteps.openPage();
 
+        /* TODO в строчке кода ниже есть new MainPageSteps()
+           а в строчках выше есть MainPageSteps mainPagesteps = new MainPageSteps();
+           вопрос? mainPagesteps нельзя ниже использовать?
+           аналогичный вопрос там дальше в тестах такие же фрагменты использования
+         */
         String actualName = new MainPageSteps()
                 .searchDevice(itemModelName)
                 .chooseItem()
@@ -57,6 +73,12 @@ public class UITests extends WebUIBaseTest {
 
     @Test
     public void addingItemToCart() {
+        /* TODO хорошо было бы чтобы в разных тестах использовались разные тестовые данные,
+            если такая возможность есть. Так мы хоть какое-то разнообразие
+            тестовых данных создадим. Чтобы не случилась ситуация, что
+            система работает только на этих данных.
+
+         */
         String itemModelName = "Google Pixel 6 8GB/128GB";
         MainPageSteps mainPagesteps = new MainPageSteps();
         mainPagesteps.openPage();
