@@ -12,7 +12,7 @@ UI/API TESTING Onliner is visited by hundreds of thousands of Belarusians to buy
 * TestNG framework
 * Lombok's dependencies for class objects initialization 
 * Allure reporting
-  ![img](https://drive.google.com/file/d/17PotlLqkYjvQUWUh1r_W5Oy3QQWXCCYQ/view)
+  ![img](https://drive.google.com/file/d/17PotlLqkYjvQUWUh1r_W5Oy3QQWXCCYQ/view?usp=share_link)
 
 
 
