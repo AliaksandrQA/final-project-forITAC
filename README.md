@@ -13,8 +13,7 @@ UI/API TESTING Onliner is visited by hundreds of thousands of Belarusians to buy
 * Lombok's dependencies for class objects initialization 
 * Allure reporting
 # TAF STRUCTURE
-
-![img](<a href="https://ibb.co/CbxhRJ5"><img src="https://i.ibb.co/bspzcHg/automation-testing-slide1.png" alt="automation-testing-slide1" border="0"></a>)
+   ![img](<a href="https://ibb.co/YcRCDwp"><img src="https://i.ibb.co/x1CkmdJ/project-Taf.jpg" alt="project-Taf" border="0"></a>)
 
 
 
