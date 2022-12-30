@@ -2,6 +2,7 @@ package com.itacademy.ui.pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import com.itacademy.ui.steps.MainPageSteps;
 import com.itacademy.utils.PropertyManager;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -34,8 +35,8 @@ public class MainPage extends BasePage{
 
 
     @Override
-    public MainPage openPage() {
+    public MainPageSteps openPage() {
         String base_ui_url = PropertyManager.getProperties("BASE_UI_URL");
         Selenide.open(base_ui_url);
-        return new MainPage();
+        return new MainPageSteps();
 }}

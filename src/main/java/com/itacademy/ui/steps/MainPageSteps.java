@@ -1,9 +1,11 @@
 package com.itacademy.ui.steps;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.itacademy.ui.pages.LoginFramePage;
 import com.itacademy.ui.pages.MainPage;
 import com.itacademy.ui.pages.ResultPage;
+import com.itacademy.utils.PropertyManager;
 
 import static com.codeborne.selenide.Selenide.switchTo;
 
@@ -26,6 +28,5 @@ public class MainPageSteps extends MainPage {
         searchField.sendKeys(model);
         switchTo().frame(searchFrame);
         return new ResultPageSteps();
-
     }
 }
