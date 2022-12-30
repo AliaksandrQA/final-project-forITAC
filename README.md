@@ -10,8 +10,9 @@ UI/API TESTING Onliner is visited by hundreds of thousands of Belarusians to buy
 * Api 
 * Gradle as automated assembly system
 * TestNG framework
-* Lombok dependencies for class objects initialization 
-* Allure reporting 
+* Lombok's dependencies for class objects initialization 
+* Allure reporting
+  ![img](https://drive.google.com/file/d/17PotlLqkYjvQUWUh1r_W5Oy3QQWXCCYQ/view)
 
 
 
