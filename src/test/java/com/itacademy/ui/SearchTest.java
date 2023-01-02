@@ -64,7 +64,7 @@ public class SearchTest extends BaseTest {
     @Test
     public void checkingItemPriceEdge(){
         String itemModelName = "Google Pixel 6 8GB/128GB";
-        String requiredItemPrice = "1600";
+        String requiredItemPrice = "1590";
 
         new MainPageSteps()
                 .searchDevice(itemModelName);

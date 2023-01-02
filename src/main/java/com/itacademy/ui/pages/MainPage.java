@@ -3,15 +3,16 @@ package com.itacademy.ui.pages;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class MainPage extends BasePage{
-    protected final SelenideElement loginButton = $("div.auth-bar__item.auth-bar__item--text");
+    protected final SelenideElement loginButton = $x("//div[@id='userbar']//child::div[@class='auth-bar__item auth-bar__item--text']");
     protected final SelenideElement userProfile = $x("//a[@href='https://profile.onliner.by/']");
-    protected final SelenideElement searchField = $(".fast-search__input");
+    protected final SelenideElement searchField = $x("//input[@name='query']");
     protected final SelenideElement searchFrame = $(".modal-iframe");
-    protected final SelenideElement onlinerLogo = $x("//*[@class='onliner_logo']");
+    protected final SelenideElement onlinerLogo = $(".onliner_logo");
 
     public MainPage() {
     }
