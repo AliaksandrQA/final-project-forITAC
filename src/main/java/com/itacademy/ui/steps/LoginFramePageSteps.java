@@ -4,6 +4,8 @@ import com.codeborne.selenide.Condition;
 import com.itacademy.ui.pages.LoginFramePage;
 import com.itacademy.ui.pages.MainPage;
 
+import static com.itacademy.ui.utils.Waiters.waitFor;
+
 public class LoginFramePageSteps extends LoginFramePage {
     public MainPage loginDataEntering(String name, String password) {
         userName.should(Condition.interactable).sendKeys(name);
