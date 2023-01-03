@@ -22,8 +22,14 @@ public class LoginFramePageSteps extends LoginFramePage {
         clickOnElement(loginButton);
         return new LoginFramePage();
     }
-    public boolean isLoginInCorrect() {
-        return notificationLoginMessage.shouldBe(Condition.visible).isDisplayed();
+    public boolean isUserNameNotificationPresent() {
+        return emptyUserNameNotification.shouldBe(Condition.visible).isDisplayed();
+    }
+    public boolean isUserPasswordNotificationPresent() {
+        return emptyPasswordNotification.shouldBe(Condition.visible).isDisplayed();
+    }
+    public boolean isInvalidUserNameNotificationPresent() {
+        return invalidUserNameAndPasswordNotification.shouldBe(Condition.visible).isDisplayed();
     }
 
 }

@@ -1,13 +1,9 @@
 package com.itacademy.ui;
 
-import com.itacademy.ui.pages.MainPage;
 import com.itacademy.ui.pages.ResultPage;
-import com.itacademy.ui.steps.LoginFramePageSteps;
 import com.itacademy.ui.steps.MainPageSteps;
 import org.assertj.core.api.Assertions;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class SearchTest extends BaseTest {

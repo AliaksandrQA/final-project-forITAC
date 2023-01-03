@@ -25,26 +25,58 @@ public class LoginTest extends BaseTest {
         LoginFramePageSteps loginFramePageSteps = new LoginFramePageSteps();
         loginFramePageSteps.loginDataEntering(userName, password);
 
-        // не знаю как там у кого, меня проверяют на РОБОТА
-        //Assert.assertTrue();
     }
 
     @Test
-    public void invalidLogin() {
+    public void testLoginWithInvalidLoginAndPassword() {
         String invalidUserName = "invalidLogin@gmail.com";
         String password = "invalidPassword";
 
         LoginFramePageSteps loginSteps = new LoginFramePageSteps();
         loginSteps.invalidLoginDataEntering(invalidUserName, password);
 
-        // конечно проверять просто видимость сообщения об ошибке - это не дело.
-        // нужно проверять появление конкретного сообщения
-        Assert.assertTrue(loginSteps.isLoginInCorrect());
+
+        Assert.assertTrue(loginSteps.isInvalidUserNameNotificationPresent());
+    }
+    @Test
+    public void testLoginWithEmptyUserNameAndEmptyPassword() {
+        String emptyUserName = "";
+        String emptyPassword = "";
+
+        LoginFramePageSteps loginSteps = new LoginFramePageSteps();
+        loginSteps.invalidLoginDataEntering(emptyUserName, emptyPassword);
+
+
+        Assert.assertTrue(loginSteps.isUserNameNotificationPresent());
+        Assert.assertTrue(loginSteps.isUserPasswordNotificationPresent());
+
+
+}
+    @Test
+    public void testLoginWithEmptyUserNameOnly() {
+        String emptyUserName = "";
+        String password = "1111";
+
+        LoginFramePageSteps loginSteps = new LoginFramePageSteps();
+        loginSteps.invalidLoginDataEntering(emptyUserName, password);
+
+
+        Assert.assertTrue(loginSteps.isUserNameNotificationPresent());
+
+
+    }
+    @Test
+    public void testLoginWithEmptyPasswordOnly() {
+        String userName = "testUser@gmail.com";
+        String emptyPassword = "";
+
+        LoginFramePageSteps loginSteps = new LoginFramePageSteps();
+        loginSteps.invalidLoginDataEntering(userName, emptyPassword);
+
+
+        Assert.assertTrue(loginSteps.isUserPasswordNotificationPresent());
+
     }
 
-    // ну и количество тестов по проверке формы логина
-    // 1. Если ник или мыло пустое
-    // 2. Если ник или мыло пустое и пароль пустой
-    // 3. Если ник или мыло хоть какой и пароль пустой
-    // 4. Если ник или мыло хоть какое и пароль хоть какой
+
 }

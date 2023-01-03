@@ -10,7 +10,9 @@ public class LoginFramePage extends MainPage {
     protected final SelenideElement userName = $("input[placeholder$='il']");
     protected final SelenideElement userPassword = $("[type='password']");
     protected final SelenideElement loginButton = $x("//button[@type='submit']/parent::div");
-    protected final SelenideElement notificationLoginMessage = $$(".auth-form__line.auth-form__line_condensed").get(2);
+    protected final SelenideElement emptyPasswordNotification = $x("//div[contains(text(),'Укажите пароль')])");
+    protected final SelenideElement emptyUserNameNotification = $x("//div[contains(text(),'Укажите ник или e-mail')]");
+    protected final SelenideElement invalidUserNameAndPasswordNotification = $x("//div[contains(text(),'Неверный логин или пароль')]");
 
     public LoginFramePage() {
     }
