@@ -51,7 +51,7 @@ public class CompanyTest {
     }
     @Test
     public void deleteCompanyWithDefunctId() {
-        Response response = companyService.deleteCompany("000200002", 404);
+        Response response = companyService.deleteCompany("000200002", 404); // Magic Number 000200002 для понимания можно превратить в переменную со звучным названием
         assertThatJson(response.body().asString()).isObject().isEmpty();
 
     }
