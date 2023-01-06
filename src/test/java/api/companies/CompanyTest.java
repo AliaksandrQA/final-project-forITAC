@@ -15,6 +15,8 @@ import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 public class CompanyTest {
     private final static CompanyService companyService = new CompanyService();
     private final static CompanyHelper companyHelper = new CompanyHelper();
+    public static final String DEFUNCT_COMPANY_ID = "000200002";
+
     @Test
     public void getAllCompaniesList() {
         List<CompanyData> allCompanies = companyService.getCompanies();
@@ -51,7 +53,7 @@ public class CompanyTest {
     }
     @Test
     public void deleteCompanyWithDefunctId() {
-        Response response = companyService.deleteCompany("000200002", 404);
+        Response response = companyService.deleteCompany(DEFUNCT_COMPANY_ID, 404);
         assertThatJson(response.body().asString()).isObject().isEmpty();
 
     }
