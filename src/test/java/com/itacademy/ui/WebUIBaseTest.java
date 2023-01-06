@@ -1,4 +1,4 @@
-package ui;
+package com.itacademy.ui;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;

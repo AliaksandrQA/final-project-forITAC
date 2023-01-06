@@ -1,4 +1,4 @@
-package ui;
+package com.itacademy.ui;
 
 import com.itacademy.ui.steps.MainPageSteps;
 import io.qameta.allure.Attachment;

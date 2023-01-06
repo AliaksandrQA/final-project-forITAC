@@ -1,4 +1,4 @@
-package api.companies;
+package com.itacademy.api.companies;
 
 import com.itacademy.api.companyservice.models.CompanyData;
 import com.itacademy.api.companyservice.models.CompanyService;
