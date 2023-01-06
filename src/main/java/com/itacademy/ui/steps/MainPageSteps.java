@@ -3,7 +3,6 @@ package com.itacademy.ui.steps;
 import com.codeborne.selenide.Condition;
 import com.itacademy.ui.pages.LoginFramePage;
 import com.itacademy.ui.pages.MainPage;
-import com.itacademy.ui.pages.ResultPage;
 
 import static com.codeborne.selenide.Selenide.switchTo;
 
