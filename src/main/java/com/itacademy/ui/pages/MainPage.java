@@ -3,12 +3,12 @@ package com.itacademy.ui.pages;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.itacademy.ui.steps.MainPageSteps;
-import com.itacademy.utils.PropertyManager;
+
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class MainPage extends BasePage{
+public class MainPage extends BasePage {
     protected final SelenideElement loginButton = $x("//div[@id='userbar']//child::div[@class='auth-bar__item auth-bar__item--text']");
     protected final SelenideElement userProfile = $x("//a[@href='https://profile.onliner.by/']");
     protected final SelenideElement searchField = $x("//input[@name='query']");
@@ -21,9 +21,11 @@ public class MainPage extends BasePage{
     public boolean isLogoPresent() {
         return onlinerLogo.exists();
     }
+
     public boolean isLogged() {
         return userProfile.exists();
     }
+
     public boolean isSearchedField() {
         return searchField.exists();
     }
@@ -33,12 +35,10 @@ public class MainPage extends BasePage{
     }
 
 
-
     @Override
     public MainPageSteps openPage() {
-        String base_ui_url = PropertyManager.getProperties("BASE_UI_URL");
-    public MainPage openPage() {
         String base_ui_url = "https://www.onliner.by/";
         Selenide.open(base_ui_url);
         return new MainPageSteps();
-}}
+    }
+}
